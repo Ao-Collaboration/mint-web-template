@@ -24,7 +24,12 @@ const styles = {
 		textDecoration: 'none',
 		'&:hover': {
 			color: teal,
-		}
+		},
+	},
+	nav: {
+		'& a': {
+			margin: '0em 1em',
+		},
 	},
 }
 
