@@ -13,10 +13,16 @@ const Header: React.FC = () => {
 				<Logo />
 			</Link>
 			<nav className={classes.nav}>
-				<Link to="#about" className={classes.link}>
+				<Link
+					to={{ pathname: HomeRoute.path, hash: '#about' }}
+					className={classes.link}
+				>
 					About
 				</Link>
-				<Link to="#faq" className={classes.link}>
+				<Link
+					to={{ pathname: HomeRoute.path, hash: '#faq' }}
+					className={classes.link}
+				>
 					FAQ
 				</Link>
 				<Link to={MintRoute.path} className={classes.link}>
