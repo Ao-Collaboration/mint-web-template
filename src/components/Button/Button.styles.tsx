@@ -11,7 +11,14 @@ import {
 	black,
 } from '../../config/colours'
 
-export type ClassNames = 'primary' | 'primaryInverted' | 'primaryBlack' | 'link' | 'success' | 'error' | 'info'
+export type ClassNames =
+	| 'primary'
+	| 'primaryInverted'
+	| 'primaryBlack'
+	| 'link'
+	| 'success'
+	| 'error'
+	| 'info'
 
 const styles = {
 	base: {
@@ -44,7 +51,7 @@ const styles = {
 		color: off_white,
 		'&:hover': {
 			color: white,
-		}
+		},
 	},
 	primaryInverted: {
 		composes: '$button',
@@ -52,7 +59,7 @@ const styles = {
 		color: off_purple,
 		'&:hover': {
 			color: purple,
-		}
+		},
 	},
 	primaryBlack: {
 		composes: '$button',
@@ -60,7 +67,7 @@ const styles = {
 		color: off_white,
 		'&:hover': {
 			color: white,
-		}
+		},
 	},
 	link: {
 		composes: '$base',
