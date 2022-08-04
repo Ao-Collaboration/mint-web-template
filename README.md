@@ -27,6 +27,8 @@ The content is spread through various files.
 
 Update the content in `src/config/content.tsx`.
 
+Note: When social links are empty (e.g. `export const DISCORD_LINK = ''`) then they will not display.
+
 #### Metadata
 
 Update the `name` in `package.json`.

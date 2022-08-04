@@ -24,8 +24,8 @@ export const WEBSITE_OUTDATED =
 export const TX_PENDING = 'Tx Pending...'
 
 // Social links
-export const DISCORD_LINK = 'https://discord.gg/'
-export const TWITTER_LINK = 'https://twitter.com/'
+export const DISCORD_LINK = ''
+export const TWITTER_LINK = ''
 export const OPENSEA_LINK = ''
 export const AOCOLLAB_LINK = 'https://block.aocollab.tech/'
 
