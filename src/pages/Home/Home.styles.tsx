@@ -8,6 +8,8 @@ import {
 } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
 
+const { PUBLIC_URL } = process.env
+
 const styles = {
 	page: {
 		display: 'flex',
@@ -46,6 +48,10 @@ const styles = {
 	},
 	hero: {
 		composes: '$section',
+		backgroundImage: `url(${PUBLIC_URL}/img/banner.png)`,
+		backgroundPosition: 'center',
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
 		textAlign: 'center',
 		'& p': {
 			maxWidth: '50rem',
@@ -59,6 +65,10 @@ const styles = {
 		composes: '$section',
 		backgroundColor: about_background,
 		color: about_text,
+	},
+	image: {
+		display: 'block',
+		margin: 'auto',
 	},
 	faq: {
 		composes: '$section',

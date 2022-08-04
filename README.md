@@ -19,7 +19,14 @@ Update the logos:
 * public/logo_192.png
 * public/img/logo_app.png
 
-Update the background image `public/img/background.png`.
+Update the banner image `public/img/banner.png`.
+This will be positioned behind the hero text on the home page.
+This image may be stretched on some devices.
+Recommended size `1920 x 540`.
+
+Update the about image `public/img/about.png`.
+This will appear below the About section.
+This image will not be stretched.
 
 ### Content
 

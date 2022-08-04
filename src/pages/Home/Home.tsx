@@ -15,6 +15,8 @@ import {
 import Button from '../../components/Button/Button'
 import Accordion from '../../components/Accordion/Accordion'
 
+const { PUBLIC_URL } = process.env
+
 const Home: React.FC = () => {
 	const navigate = useNavigate()
 	const classes = useStyles()
@@ -43,6 +45,7 @@ const Home: React.FC = () => {
 					<div>
 						<h2>{ABOUT_TITLE}</h2>
 						<p>{ABOUT_DESCRIPTION}</p>
+						<img src={`${PUBLIC_URL}/img/about.png`} className={classes.image} />
 					</div>
 				</section>
 
