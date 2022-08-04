@@ -164,7 +164,7 @@ const Minting: FC = () => {
 								<option value={i + 1}>{i + 1}</option>
 							))}
 						</Select>
-						<Button onClick={doMint} disabled={txPending || allowance === 0}>
+						<Button className='primary' onClick={doMint} disabled={txPending || allowance === 0}>
 							{txPending ? TX_PENDING : MINT_BTN_TEXT}
 						</Button>
 					</div>

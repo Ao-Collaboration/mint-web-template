@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { teal, white } from '../../config/colours'
+import { page_background, page_text } from '../../config/colours'
 import { standardFontFamily } from '../../config/jss-vars'
 
 export type ClassNames = 'default'
@@ -9,14 +9,14 @@ const styles = {
 		display: 'flex',
 		flexDirection: 'column',
 		minHeight: '100vh',
-		backgroundColor: teal,
+		backgroundColor: page_background,
 		overflowX: 'hidden',
 	},
 	main: {
 		flex: 1,
 		'& > *': {
 			fontFamily: standardFontFamily,
-			color: white,
+			color: page_text,
 		},
 	},
 }

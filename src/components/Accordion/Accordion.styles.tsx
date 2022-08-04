@@ -1,13 +1,13 @@
 import { createUseStyles } from 'react-jss'
-import { black, off_black, white } from '../../config/colours'
+import { faq_question_background, faq_question_text, off_black } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
 
 const styles = {
 	accordion: {
 		margin: '1em',
 		padding: '1.5rem 4rem',
-		background: white,
-		color: black,
+		background: faq_question_background,
+		color: faq_question_text,
 		boxShadow: `0em 0.15em 0.65em 0em ${off_black}`,
 	},
 	check: {

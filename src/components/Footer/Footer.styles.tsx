@@ -1,10 +1,9 @@
 import { createUseStyles } from 'react-jss'
-import { green, text_shadow, white } from '../../config/colours'
+import { page_text, text_shadow } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
 
 const styles = {
 	footer: {
-		background: green,
 		display: 'flex',
 		flexDirection: 'row',
 		alignItems: 'baseline',
@@ -14,18 +13,17 @@ const styles = {
 		padding: '2em 0',
 		fontSize: '0.8em',
 		gap: '0.8em',
-		color: white,
+		color: page_text,
 		'& a': {
-			color: white,
+			color: page_text,
 		},
 	},
 	title: {
-		color: white,
 		fontSize: '3em',
 		marginBottom: '0.2em',
 		fontFamily: headingFontFamily,
 		textTransform: 'uppercase',
-		textShadow: `3px 3px 5px ${text_shadow}`,
+		textShadow: text_shadow,
 	},
 	linkGroup: {
 		display: 'flex',

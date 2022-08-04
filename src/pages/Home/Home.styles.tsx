@@ -1,9 +1,10 @@
 import { createUseStyles } from 'react-jss'
 import {
-	black,
-	orange,
-	white,
 	text_shadow,
+	about_background,
+	about_text,
+	faq_background,
+	faq_title_text,
 } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
 
@@ -20,7 +21,7 @@ const styles = {
 			fontFamily: headingFontFamily,
 			textTransform: 'uppercase',
 			fontSize: '4em',
-			textShadow: `3px 3px 5px ${text_shadow}`,
+			textShadow: text_shadow,
 			margin: '0',
 		},
 	},
@@ -36,7 +37,7 @@ const styles = {
 			fontFamily: headingFontFamily,
 			textTransform: 'uppercase',
 			fontSize: '2em',
-			textShadow: `3px 3px 5px ${text_shadow}`,
+			textShadow: text_shadow,
 			margin: '0',
 		},
 		'& div': {
@@ -56,12 +57,13 @@ const styles = {
 	},
 	about: {
 		composes: '$section',
-		backgroundColor: white,
-		color: black,
+		backgroundColor: about_background,
+		color: about_text,
 	},
 	faq: {
 		composes: '$section',
-		backgroundColor: orange,
+		backgroundColor: faq_background,
+		color: faq_title_text,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
