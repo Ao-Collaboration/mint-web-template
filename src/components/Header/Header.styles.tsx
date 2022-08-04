@@ -1,34 +1,36 @@
 import { createUseStyles } from 'react-jss'
-import { black, teal } from '../../config/colours'
+import { white } from '../../config/colours'
 import { weightSemiBold } from '../../config/jss-vars'
 
 const styles = {
 	header: {
 		display: 'flex',
 		flexDirection: 'row',
-		justifyContent: 'flex-start',
+		justifyContent: 'center',
 		alignItems: 'center',
 		gap: '1em',
 		padding: '1em',
 	},
-	rightContent: {
-		marginLeft: 'auto',
+	nav: {
 		display: 'flex',
+		flexDirection: 'row',
 		alignItems: 'center',
+		justifyContent: 'space-between',
+		width: '100%',
+	},
+	linkGroup: {
+		display: 'flex',
+		flexDirection: 'row',
+		gap: '1.5em',
 	},
 	link: {
 		textTransform: 'uppercase',
-		color: black,
+		color: white,
 		fontSize: '1.5em',
 		fontWeight: weightSemiBold,
 		textDecoration: 'none',
 		'&:hover': {
-			color: teal,
-		},
-	},
-	nav: {
-		'& a': {
-			margin: '0em 1em',
+			textDecoration: 'underline',
 		},
 	},
 }

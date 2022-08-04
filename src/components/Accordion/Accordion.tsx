@@ -10,8 +10,16 @@ const Accordion: React.FC<Props> = ({ title, expandedText }) => {
 
 	return (
 		<div className={classes.accordion}>
-			<input type="checkbox" defaultChecked className={classes.check} />
-			<h3>{title}</h3>
+			<input
+				aria-label={title}
+				aria-haspopup={true}
+				type="checkbox"
+				defaultChecked
+				className={classes.check}
+			/>
+			<h4 className={classes.title} aria-hidden>
+				{title}
+			</h4>
 			<p className={classes.description}>{expandedText}</p>
 		</div>
 	)

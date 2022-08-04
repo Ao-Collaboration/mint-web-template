@@ -1,8 +1,5 @@
 import { createUseStyles } from 'react-jss'
 import {
-	black,
-	orange,
-	white,
 	text_shadow,
 } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
@@ -32,6 +29,7 @@ const styles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: '4em 0em',
+		position: 'relative',
 		'& h2, h3': {
 			fontFamily: headingFontFamily,
 			textTransform: 'uppercase',
@@ -53,22 +51,6 @@ const styles = {
 		'& sub': {
 			fontSize: '0.5em',
 		},
-	},
-	about: {
-		composes: '$section',
-		backgroundColor: white,
-		color: black,
-	},
-	faq: {
-		composes: '$section',
-		backgroundColor: orange,
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	centered: {
-		textAlign: 'center',
 	},
 }
 

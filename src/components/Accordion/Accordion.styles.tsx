@@ -1,7 +1,15 @@
 import { createUseStyles } from 'react-jss'
+import { black, off_black, white } from '../../config/colours'
+import { headingFontFamily } from '../../config/jss-vars'
 
 const styles = {
-	accordion: {},
+	accordion: {
+		margin: '1em',
+		padding: '1.5rem 4rem',
+		background: white,
+		color: black,
+		boxShadow: `0em 0.15em 0.65em 0em ${off_black}`,
+	},
 	check: {
 		position: 'absolute',
 		cursor: 'pointer',
@@ -10,10 +18,25 @@ const styles = {
 		zIndex: '1',
 		opacity: '0',
 		'&:checked ~ p': {
-			marginTop: '0',
 			maxHeight: '0',
 			opacity: '0',
 			transform: 'translate(0, 50%)',
+			paddingBottom: '0',
+			margin: '0',
+		},
+		'&:checked ~ h4': {
+			'&::after': {
+				content: '"+"',
+			},
+		},
+	},
+	title: {
+		fontSize: '1.5em',
+		margin: '0',
+		fontFamily: headingFontFamily,
+		'&::after': {
+			content: '"-"',
+			paddingLeft: '0.5em',
 		},
 	},
 	description: {
