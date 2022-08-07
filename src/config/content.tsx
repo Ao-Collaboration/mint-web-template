@@ -37,6 +37,40 @@ export const HERO_BUTTON_TEXT = 'Mint Now'
 export const HERO_SUBTEXT =
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida.'
 
+export const ROADMAP_TITLE = 'Roadmap'
+
+export const TEAM_MEMBER_TITLE = 'Team Members'
+export const TEAM_MEMBERS = [
+	{
+		name: 'Team Member 1',
+		image: 'avatar1.png',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.',
+		twitter: 'team1',
+	},
+	{
+		name: 'Team Member 2',
+		image: 'avatar2.png',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.',
+		twitter: '',
+	},
+	{
+		name: 'Team Member 3',
+		image: 'avatar3.png',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.',
+		twitter: 'team3',
+	},
+	{
+		name: 'Team Member 4',
+		image: 'avatar4.png',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.',
+		twitter: '',
+	},
+]
+
 export const ABOUT_TITLE = 'About Us'
 export const ABOUT_DESCRIPTION =
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.'
@@ -46,16 +80,15 @@ export const FAQS = [
 	{
 		title: 'What is Project Name?',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.'
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida. Integer hendrerit nisl non magna blandit eleifend. Praesent mauris velit, ullamcorper nec ligula sed vestibulum.',
 	},
 	{
 		title: 'What will the mint price be?',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida.'
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor iaculis gravida.',
 	},
 	{
 		title: 'Wen Mint?',
-		description:
-			'TBD',
+		description: 'TBD',
 	},
 ]
