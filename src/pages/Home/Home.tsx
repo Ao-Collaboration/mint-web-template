@@ -1,6 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import { MintRoute } from '../routes'
 import PageWrapper from '../../components/PageWrapper/PageWrapper'
+import useStyles from './Home.styles'
+import { useNavigate } from 'react-router-dom'
 import {
 	ABOUT_DESCRIPTION,
 	ABOUT_TITLE,
@@ -12,8 +13,9 @@ import {
 	HERO_TITLE,
 } from '../../config/content'
 import Button from '../../components/Button/Button'
-import useStyles from './Home.styles'
 import Accordion from '../../components/Accordion/Accordion'
+
+const { PUBLIC_URL } = process.env
 
 const Home: React.FC = () => {
 	const navigate = useNavigate()
@@ -40,13 +42,16 @@ const Home: React.FC = () => {
 				</section>
 
 				<section id="about" className={classes.about}>
-					<h2>{ABOUT_TITLE}</h2>
-					<p>{ABOUT_DESCRIPTION}</p>
+					<div>
+						<h2>{ABOUT_TITLE}</h2>
+						<p>{ABOUT_DESCRIPTION}</p>
+						<img src={`${PUBLIC_URL}/img/about.png`} className={classes.image} />
+					</div>
 				</section>
 
 				<section id="faq" className={classes.faq}>
-					<>
-						<h2>{FAQ_TITLE}</h2>
+					<div>
+						<h2 className={classes.centered}>{FAQ_TITLE}</h2>
 						{FAQS.map(faq => {
 							return (
 								<Accordion
@@ -56,7 +61,7 @@ const Home: React.FC = () => {
 								/>
 							)
 						})}
-					</>
+					</div>
 				</section>
 			</div>
 		</PageWrapper>

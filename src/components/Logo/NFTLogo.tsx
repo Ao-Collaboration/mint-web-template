@@ -3,10 +3,10 @@ import useStyles, { ClassNames } from './Logo.styles'
 const { PUBLIC_URL } = process.env
 
 interface Props {
-	className?: ClassNames;
+	className?: ClassNames
 }
 
-const NFTLogo: React.FC<Props> = ({className}) => {
+const NFTLogo: React.FC<Props> = ({ className }) => {
 	const classes = useStyles()
 
 	return (

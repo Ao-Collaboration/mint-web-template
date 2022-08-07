@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { HomeRoute, MintRoute } from '../../pages/routes'
-import ConnectButton from '../Button/ConnectButton'
 import Logo from '../Logo/NFTLogo'
 import useStyles from './Header.styles'
 
@@ -9,29 +9,30 @@ const Header: React.FC = () => {
 
 	return (
 		<header className={classes.header}>
-			<Link to={HomeRoute.path}>
-				<Logo />
-			</Link>
 			<nav className={classes.nav}>
-				<Link
-					to={{ pathname: HomeRoute.path, hash: '#about' }}
-					className={classes.link}
-				>
-					About
+				<Link to={HomeRoute.path}>
+					<Logo className="defaultRect" />
 				</Link>
-				<Link
-					to={{ pathname: HomeRoute.path, hash: '#faq' }}
-					className={classes.link}
-				>
-					FAQ
-				</Link>
-				<Link to={MintRoute.path} className={classes.link}>
-					Mint
-				</Link>
+				<div className={classes.linkGroup}>
+					<HashLink
+						smooth
+						to={`${HomeRoute.path}#about`}
+						className={classes.link}
+					>
+						About
+					</HashLink>
+					<HashLink
+						smooth
+						to={`${HomeRoute.path}#faq`}
+						className={classes.link}
+					>
+						FAQ
+					</HashLink>
+					<Link to={MintRoute.path} className={classes.link}>
+						Mint
+					</Link>
+				</div>
 			</nav>
-			<div className={classes.rightContent}>
-				<ConnectButton />
-			</div>
 		</header>
 	)
 }

@@ -1,6 +1,6 @@
 # Mint Web Template
 
-A simple base website for minting NFTs. 
+A simple base website for minting NFTs.
 
 ## Usage
 
@@ -19,13 +19,22 @@ Update the logos:
 * public/logo_192.png
 * public/img/logo_app.png
 
-Update the background image `public/img/background.png`.
+Update the banner image `public/img/banner.png`.
+This will be positioned behind the hero text on the home page.
+This image may be stretched on some devices.
+Recommended size `1920 x 540`.
+
+Update the about image `public/img/about.png`.
+This will appear below the About section.
+This image will not be stretched.
 
 ### Content
 
 The content is spread through various files.
 
 Update the content in `src/config/content.tsx`.
+
+Note: When social links are empty (e.g. `export const DISCORD_LINK = ''`) then they will not display.
 
 #### Metadata
 
@@ -35,17 +44,26 @@ Update the metadata in `public/index.html`.
 
 Update the manifest `public/manifest.json`.
 
+### Terms and Conditions
+
+Update `src/config/terms.md` with the terms and conditions.
+This file supports [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
 #### Header / Footer
 
 The header content is located in `src/components/Header/`
 The footer content is located in `src/components/Footer/`
 
-### Web3
+### Web3 - DEV NEEDED
 
 Update `src/abi/tokenABI.json` to match the contract ABI.
 
 Update the contract addresses in `src/config/chain.tsx`.
+```js
+export const getContractId = (chainId: number): string => chainId === 4 ? '0xXXX' : 'PUT CONTRACT ADDRESS HERE'`
+```
+
+Update the max supply in `src/config/chain.tsx`.
 
 Update the mint integration in `src/components/Minting/Minting.tsx`.
 Currently:
@@ -53,6 +71,9 @@ Currently:
 ```js
 	const tx = await nftContract.mint(await signer.getAddress(), 1)
 ```
+
+Update the allowlist addresses in `src/config/allowlist.tsx`.
+Each address is on a new line in the format `'0xaddress',`.
 
 ### Fonts
 
@@ -71,8 +92,6 @@ If you are using a light theme, update `TOAST_THEME` to `light`.
 **Note**: If you are renaming the colours you will have to rename the references too.
 
 ### Deployment
-
-Update the URL in `package.json` under `predeploy`.
 
 Make sure all your work is committed.
 

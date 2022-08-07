@@ -1,30 +1,20 @@
 import { createUseStyles } from 'react-jss'
-import { standardFontFamily, weightSemiBold } from '../../config/jss-vars'
+import { headingFontFamily, weightSemiBold } from '../../config/jss-vars'
 import {
-	white,
 	off_black,
-	off_white,
-	cyan,
-	teal,
-	purple,
-	off_purple,
-	black,
+	button_text,
+	button_background,
 } from '../../config/colours'
 
 export type ClassNames =
 	| 'primary'
-	| 'primaryInverted'
-	| 'primaryBlack'
 	| 'link'
-	| 'success'
-	| 'error'
-	| 'info'
 
 const styles = {
 	base: {
 		cursor: 'pointer',
-		fontFamily: standardFontFamily,
-		fontSize: '1rem',
+		fontFamily: headingFontFamily,
+		fontSize: '1.5rem',
 		lineHeight: '1rem',
 		textAlign: 'center',
 		display: 'inline-block',
@@ -33,8 +23,7 @@ const styles = {
 	button: {
 		composes: '$base',
 		border: 'none',
-		borderRadius: '0.35em',
-		padding: '0.75rem 4rem',
+		padding: '1.5rem 4rem',
 		letterSpacing: 0,
 		textTransform: 'uppercase',
 		fontWeight: weightSemiBold,
@@ -44,35 +33,20 @@ const styles = {
 			opacity: 0.5,
 			pointerEvents: 'none',
 		},
+		'&:hover': {
+			opacity: '0.85',
+			transition: 'opacity .25s ease-in-out',
+		},
 	},
 	primary: {
 		composes: '$button',
-		background: purple,
-		color: off_white,
-		'&:hover': {
-			color: white,
-		},
+		background: button_background,
+		color: button_text,
 	},
-	primaryInverted: {
-		composes: '$button',
-		background: white,
-		color: off_purple,
-		'&:hover': {
-			color: purple,
-		},
-	},
-	primaryBlack: {
-		composes: '$button',
-		background: black,
-		color: off_white,
-		'&:hover': {
-			color: white,
-		},
-	},
+	// Unused
 	link: {
 		composes: '$base',
 		border: 0,
-		color: cyan,
 		cursor: 'pointer',
 		display: 'inline-block',
 		padding: 0,
@@ -82,23 +56,6 @@ const styles = {
 		height: '0.875rem',
 		lineHeight: '0.875rem',
 		letterSpacing: 0.2,
-		'&:disabled': {
-			cursor: 'default',
-			opacity: 0.5,
-			pointerEvents: 'none',
-		},
-		'&:hover': {
-			color: teal,
-		},
-	},
-	success: {
-		composes: '$primary',
-	},
-	error: {
-		composes: '$primary',
-	},
-	info: {
-		composes: '$primary',
 	},
 }
 
