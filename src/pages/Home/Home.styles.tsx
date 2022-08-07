@@ -5,6 +5,8 @@ import {
 	about_text,
 	faq_background,
 	faq_title_text,
+	roadmap_background,
+	roadmap_text,
 } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
 
@@ -40,7 +42,10 @@ const styles = {
 			textTransform: 'uppercase',
 			fontSize: '2em',
 			textShadow: text_shadow,
-			margin: '0',
+			margin: '1em 0em',
+		},
+		'& h3': {
+			fontSize: '1.3em',
 		},
 		'& div': {
 			maxWidth: '50rem',
@@ -65,6 +70,11 @@ const styles = {
 		composes: '$section',
 		backgroundColor: about_background,
 		color: about_text,
+	},
+	roadmap: {
+		composes: '$section',
+		backgroundColor: roadmap_background,
+		color: roadmap_text,
 	},
 	image: {
 		display: 'block',

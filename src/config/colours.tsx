@@ -16,6 +16,10 @@ export const button_text = '#3c687d'
 export const about_background = '#FFF'
 export const about_text = '#000'
 
+// Roadmap section
+export const roadmap_background = '#3c687d'
+export const roadmap_text = '#FFF'
+
 // FAQ section
 export const faq_background = '#ed962c'
 export const faq_title_text = '#000'
