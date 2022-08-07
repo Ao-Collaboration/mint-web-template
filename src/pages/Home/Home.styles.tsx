@@ -7,6 +7,8 @@ import {
 	faq_title_text,
 	roadmap_background,
 	roadmap_text,
+	team_text,
+	team_background,
 } from '../../config/colours'
 import { headingFontFamily } from '../../config/jss-vars'
 
@@ -49,6 +51,7 @@ const styles = {
 		},
 		'& div': {
 			maxWidth: '50rem',
+			padding: '2rem',
 		},
 	},
 	hero: {
@@ -70,6 +73,11 @@ const styles = {
 		composes: '$section',
 		backgroundColor: about_background,
 		color: about_text,
+	},
+	team: {
+		composes: '$section',
+		backgroundColor: team_background,
+		color: team_text,
 	},
 	roadmap: {
 		composes: '$section',

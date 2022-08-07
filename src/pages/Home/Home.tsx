@@ -12,6 +12,7 @@ import {
 	HERO_SUBTEXT,
 	HERO_TITLE,
 	ROADMAP_TITLE,
+	TEAM_MEMBER_TITLE,
 } from '../../config/content'
 import Button from '../../components/Button/Button'
 import roadmapFile from '../../config/roadmap.md'
@@ -19,6 +20,7 @@ import Accordion from '../../components/Accordion/Accordion'
 import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Spinner from '../../components/Spinner/Spinner'
+import Team from '../../components/Team/Team'
 
 const { PUBLIC_URL } = process.env
 
@@ -74,6 +76,11 @@ const Home: React.FC = () => {
 							<Spinner />
 						)}
 					</div>
+				</section>
+
+				<section id="team" className={classes.team}>
+					<h2 className={classes.centered}>{TEAM_MEMBER_TITLE}</h2>
+					<Team />
 				</section>
 
 				<section id="faq" className={classes.faq}>

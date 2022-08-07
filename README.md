@@ -15,9 +15,9 @@ yarn start
 
 Update the logos:
 
-* public/favicon.ico
-* public/logo_192.png
-* public/img/logo_app.png
+- public/favicon.ico
+- public/logo_192.png
+- public/img/logo_app.png
 
 Update the banner image `public/img/banner.png`.
 This will be positioned behind the hero text on the home page.
@@ -49,6 +49,16 @@ Update the manifest `public/manifest.json`.
 Update `src/config/terms.md` with the terms and conditions.
 This file supports [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
+### Roadmap
+
+Update `src/config/roadmap.md` with your roadmap.
+This file supports [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
+
+### Team
+
+Update `TEAM_MEMBERS` in `src/config/content.md` with your team members.
+Ensure the team's images are placed in `public/img/` directory and the filenames match those used above.
+
 #### Header / Footer
 
 The header content is located in `src/components/Header/`
@@ -59,6 +69,7 @@ The footer content is located in `src/components/Footer/`
 Update `src/abi/tokenABI.json` to match the contract ABI.
 
 Update the contract addresses in `src/config/chain.tsx`.
+
 ```js
 export const getContractId = (chainId: number): string => chainId === 4 ? '0xXXX' : 'PUT CONTRACT ADDRESS HERE'`
 ```
@@ -69,7 +80,7 @@ Update the mint integration in `src/components/Minting/Minting.tsx`.
 Currently:
 
 ```js
-	const tx = await nftContract.mint(await signer.getAddress(), 1)
+const tx = await nftContract.mint(await signer.getAddress(), 1)
 ```
 
 Update the allowlist addresses in `src/config/allowlist.tsx`.
